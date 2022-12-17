@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Document</title>
+<style>
+    #body{
+        background-image: url(./back\ ground.jpg);
+        background-repeat:no-repeat;
+        background-size:cover;
+    }
+    #a{
+        width:280px;
+        height:330px;
+        border-radius: 6%;
+        box-shadow: 10px 10px 5px black;
+        background-repeat:no-repeat;
+        background-size:cover;
+        border: 2px solid black;
+    
+    }
+</style>
+</head>
+
+<body id="body"><br><br><br><br><br><br><br><br><br><br><br><br><br> <br>
+ 
+    <center>
+        <div id=a>
+            <center>
+            <marquee behavior="scroll" direction="right"><h1>CALCULATOR</h1></marquee>
+        </center>
+        <form id="calculator">
+            <input id="display">
+            <br><br>
+            <input type="button" value="AC" onclick="calculator.display.value=''">
+            <input type="button" value="C" id="keys" onclick="backspace()">
+            <input type="button" value="%" onclick="calculator.display.value+='%'">
+            <input type="button" value="+" onclick="calculator.display.value+='+'">
+            <br><br>
+            <input type="button" value="1" onclick="calculator.display.value+='1'">
+            <input type="button" value="2" onclick="calculator.display.value+='2'">
+            <input type="button" value="3" onclick="calculator.display.value+='3'">
+            <input type="button" value="-" onclick="calculator.display.value+='-'">
+            <br><br>
+            <input type="button" value="4" onclick="calculator.display.value+='4'">
+            <input type="button" value="5" onclick="calculator.display.value+='5'">
+            <input type="button" value="6" onclick="calculator.display.value+='6'">
+            <input type="button" value="*" onclick="calculator.display.value+='*'">
+            <br><br>
+            <input type="button" value="7" onclick="calculator.display.value+='7'">
+            <input type="button" value="8" onclick="calculator.display.value+='8'">
+            <input type="button" value="9" onclick="calculator.display.value+='9'">
+            <input type="button" value="/" onclick="calculator.display.value+='/'">
+            <br><br>
+            <input type="button" value="." onclick="calculator.display.value+='.'">
+            <input type="button" value="0" onclick="calculator.display.value+='0'">
+            <input type="button" value="=" onclick="calculator.display.value=eval(calculator.display.value)">
+            
+        </form>
+        
+        <!-- <script>
+            function fun(button)
+            {
+                var exp = document.calculator.display.value;
+                document.calculator.display.value = exp.substring(0,exp.length-1)
+            }
+            
+        </script> -->
+    </div>
+<script>
+var box=document.getElementById('display');
+function addtoscreen(x) {
+box.value +=x;
+}
+function backspace(){
+var number=box.value;
+var len=number.length-1;
+var newnumber=number.substring(0,len);
+box.value = newnumber;
+}
+</script>
+    </center>
+</body>
+</html>
